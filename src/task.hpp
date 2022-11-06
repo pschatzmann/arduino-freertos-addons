@@ -32,6 +32,9 @@ public:
         task();
       }
     }
+    // end task
+    vTaskDelete(NULL);
+    setThreadStarted(false);
   }
 
 protected:

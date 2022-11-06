@@ -458,6 +458,10 @@ class Thread {
     friend class ConditionVariable;
 
 #endif
+protected:
+        void setThreadStarted(bool started){
+                ThreadStarted = started;
+        }
 
 };
 
