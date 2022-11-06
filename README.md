@@ -2,7 +2,28 @@
 
 Standard FreeRTOS uses C based API. However I prefer to have some nice C++ abstractions. That's when I disovered the [freertos-addons project from Michael Becker](https://github.com/michaelbecker/freertos-addons). 
 
-I have converted it to an Arduino Library, so that it can be used e.g. on an ESP32.
+I have converted it to an Arduino Library, so that it can be used e.g. on an ESP32. I also added a new Task class (which is a subclass of Thread) and allows to pass a function pointer in the constructor. For the ESP32 we support the xTaskCreatePinnedToCore() by passing the core in the Start method.
+
+## Example
+Here is a simple example that creates a task and uses a queue to pass the information back to the Arduino task:
+
+```c++
+#include "freertos-all.h"
+
+Queue queue(100, sizeof(size_t));
+Task task("name",1000,10, [](){ static size_t count=0; queue.Enqueue(&(++count));});
+
+void setup() {
+  Serial.begin(115200);
+  task.Start(0);
+}
+
+void loop() {
+  size_t result;
+  queue.Dequeue(&result);
+  Serial.println(result);
+}
+```
 
 ## Current Features
 
