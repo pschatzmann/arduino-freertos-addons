@@ -14,7 +14,7 @@ var searchData=
   ['slnode_5ft_5f_11',['SlNode_t_',['../struct_sl_node__t__.html',1,'']]],
   ['stack_12',['Stack',['../struct_mem_pool__t__.html#a95b6581ca05101e38b7c4ce145227fe6',1,'MemPool_t_']]],
   ['stack_5ft_5f_13',['Stack_t_',['../struct_stack__t__.html',1,'']]],
-  ['start_14',['Start',['../classcpp__freertos_1_1_thread.html#a279c2b78aa2bf43371f2462623588830',1,'cpp_freertos::Thread::Start()'],['../classcpp__freertos_1_1_timer.html#a171c77988a6d4c2d8d32f86344514359',1,'cpp_freertos::Timer::Start(TickType_t CmdTimeout=portMAX_DELAY)']]],
+  ['start_14',['Start',['../classcpp__freertos_1_1_thread.html#a279c2b78aa2bf43371f2462623588830',1,'cpp_freertos::Thread::Start()'],['../classcpp__freertos_1_1_thread.html#ad316472f4b620715ea0afe15f157d88d',1,'cpp_freertos::Thread::Start(int core)'],['../classcpp__freertos_1_1_timer.html#a171c77988a6d4c2d8d32f86344514359',1,'cpp_freertos::Timer::Start(TickType_t CmdTimeout=portMAX_DELAY)']]],
   ['startfromisr_15',['StartFromISR',['../classcpp__freertos_1_1_timer.html#ae512d19700e4197dfb6b6e7c59fa6143',1,'cpp_freertos::Timer']]],
   ['startscheduler_16',['StartScheduler',['../classcpp__freertos_1_1_thread.html#a6c5e2fea2e1badb606730c279559aa36',1,'cpp_freertos::Thread']]],
   ['stop_17',['Stop',['../classcpp__freertos_1_1_timer.html#a15873ed66f31b28e7c7af88ca0c9d2d5',1,'cpp_freertos::Timer']]],

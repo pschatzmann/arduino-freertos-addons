@@ -91,26 +91,26 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    count = numberOfLoops;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">   21</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">Run</a>() {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (count==0){</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        task();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      }</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;count;j++){</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">   25</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">Run</a>() {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (count==0){</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        task();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  void (*task)() = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">size_t</span> count=0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <span class="comment">// namespace cpp_freertos</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j=0;j&lt;count;j++){</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        task();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  void (*task)() = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">size_t</span> count=0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace cpp_freertos</span></div>
 <div class="ttc" id="aclasscpp__freertos_1_1_task_html"><div class="ttname"><a href="classcpp__freertos_1_1_task.html">cpp_freertos::Task</a></div><div class="ttdoc">A Thread which has the Run method implemented as loop which is executing the function that is passed ...</div><div class="ttdef"><b>Definition:</b> task.hpp:12</div></div>
-<div class="ttc" id="aclasscpp__freertos_1_1_task_html_a94e152a6479143e1f56627dee9f4df8a"><div class="ttname"><a href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">cpp_freertos::Task::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdef"><b>Definition:</b> task.hpp:21</div></div>
+<div class="ttc" id="aclasscpp__freertos_1_1_task_html_a94e152a6479143e1f56627dee9f4df8a"><div class="ttname"><a href="classcpp__freertos_1_1_task.html#a94e152a6479143e1f56627dee9f4df8a">cpp_freertos::Task::Run</a></div><div class="ttdeci">virtual void Run()</div><div class="ttdoc">Custom Implementation which is executing the provided method in a loop.</div><div class="ttdef"><b>Definition:</b> task.hpp:25</div></div>
 <div class="ttc" id="aclasscpp__freertos_1_1_thread_html"><div class="ttname"><a href="classcpp__freertos_1_1_thread.html">cpp_freertos::Thread</a></div><div class="ttdef"><b>Definition:</b> thread.hpp:79</div></div>
 <div class="ttc" id="anamespacecpp__freertos_html"><div class="ttname"><a href="namespacecpp__freertos.html">cpp_freertos</a></div><div class="ttdef"><b>Definition:</b> condition_variable.hpp:57</div></div>
 </div><!-- fragment --></div><!-- contents -->

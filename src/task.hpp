@@ -18,6 +18,10 @@ public:
     count = numberOfLoops;
   }
 
+  /**
+   * @brief Custom Implementation which is executing the provided method in a loop
+   * 
+   */
   virtual void Run() {
     if (count==0){
       while (true) {

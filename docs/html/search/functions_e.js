@@ -11,7 +11,7 @@ var searchData=
   ['setperiodfromisr_8',['SetPeriodFromISR',['../classcpp__freertos_1_1_timer.html#a0f072ddbcaba51714bdebe9d107e747f',1,'cpp_freertos::Timer']]],
   ['setpriority_9',['SetPriority',['../classcpp__freertos_1_1_thread.html#a5e40076f0050bdcfcf949506f139879e',1,'cpp_freertos::Thread']]],
   ['signal_10',['Signal',['../classcpp__freertos_1_1_condition_variable.html#a0138363e79628a7d0c0af8ae39e36bb3',1,'cpp_freertos::ConditionVariable']]],
-  ['start_11',['Start',['../classcpp__freertos_1_1_thread.html#a279c2b78aa2bf43371f2462623588830',1,'cpp_freertos::Thread::Start()'],['../classcpp__freertos_1_1_timer.html#a171c77988a6d4c2d8d32f86344514359',1,'cpp_freertos::Timer::Start(TickType_t CmdTimeout=portMAX_DELAY)']]],
+  ['start_11',['Start',['../classcpp__freertos_1_1_thread.html#a279c2b78aa2bf43371f2462623588830',1,'cpp_freertos::Thread::Start()'],['../classcpp__freertos_1_1_thread.html#ad316472f4b620715ea0afe15f157d88d',1,'cpp_freertos::Thread::Start(int core)'],['../classcpp__freertos_1_1_timer.html#a171c77988a6d4c2d8d32f86344514359',1,'cpp_freertos::Timer::Start(TickType_t CmdTimeout=portMAX_DELAY)']]],
   ['startfromisr_12',['StartFromISR',['../classcpp__freertos_1_1_timer.html#ae512d19700e4197dfb6b6e7c59fa6143',1,'cpp_freertos::Timer']]],
   ['startscheduler_13',['StartScheduler',['../classcpp__freertos_1_1_thread.html#a6c5e2fea2e1badb606730c279559aa36',1,'cpp_freertos::Thread']]],
   ['stop_14',['Stop',['../classcpp__freertos_1_1_timer.html#a15873ed66f31b28e7c7af88ca0c9d2d5',1,'cpp_freertos::Timer']]],

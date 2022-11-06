@@ -170,6 +170,49 @@ bool Thread::Start()
     return rc != pdPASS ? false : true;
 }
 
+#ifdef ESP32
+
+  /// @brief Starts the task on the indicated core
+  /// @param core 
+  /// @return true if it could be started successfully
+  bool Thread::Start(int core)
+  {
+      //
+      //  If the Scheduler is on, we need to lock before checking
+      //  the ThreadStarted variable. We'll leverage the LockGuard 
+      //  pattern, so we can create the guard and just forget it. 
+      //  Leaving scope, including the return, will automatically 
+      //  unlock it.
+      //
+      if (SchedulerActive) {
+
+          LockGuard guard (StartGuardLock);
+
+          if (ThreadStarted)
+              return false;
+          else 
+              ThreadStarted = true;
+      }
+      //
+      //  If the Scheduler isn't running, just check it.
+      //
+      else {
+
+          if (ThreadStarted)
+              return false;
+          else 
+              ThreadStarted = true;
+      }
+      BaseType_t rc = xTaskCreatePinnedToCore(TaskFunctionAdapter,
+                                  Name,
+                                  StackDepth,
+                                  this,
+                                  Priority,
+                                  &handle, 
+                                  core);
+      return rc != pdPASS ? false : true;
+  }
+#endif  
 
 #if (INCLUDE_vTaskDelete == 1)
 

@@ -129,7 +129,10 @@ class Thread {
          *  This should only be called once ever! 
          */
         bool Start();
-
+        
+#ifdef ESP32
+        bool Start(int core);
+#endif
         /**
          *  Our destructor. This must exist even if FreeRTOS is
          *  configured to disallow task deletion.

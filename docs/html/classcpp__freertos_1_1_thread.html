@@ -124,6 +124,9 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> ()</td>
 <tr class="separator:a5e40076f0050bdcfcf949506f139879e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a279c2b78aa2bf43371f2462623588830"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpp__freertos_1_1_thread.html#a279c2b78aa2bf43371f2462623588830">Start</a> ()</td></tr>
 <tr class="separator:a279c2b78aa2bf43371f2462623588830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad316472f4b620715ea0afe15f157d88d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpp__freertos_1_1_thread.html#ad316472f4b620715ea0afe15f157d88d">Start</a> (int core)</td></tr>
+<tr class="memdesc:ad316472f4b620715ea0afe15f157d88d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the task on the indicated core.  <a href="classcpp__freertos_1_1_thread.html#ad316472f4b620715ea0afe15f157d88d">More...</a><br /></td></tr>
+<tr class="separator:ad316472f4b620715ea0afe15f157d88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eca55dec69e4758cf397e882338c7e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcpp__freertos_1_1_thread.html#a9eca55dec69e4758cf397e882338c7e6">Suspend</a> ()</td></tr>
 <tr class="separator:a9eca55dec69e4758cf397e882338c7e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -639,7 +642,7 @@ You need to use this call. Do NOT directly call vTaskEndScheduler while using th
 </div>
 </div>
 <a id="a279c2b78aa2bf43371f2462623588830" name="a279c2b78aa2bf43371f2462623588830"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a279c2b78aa2bf43371f2462623588830">&#9670;&#160;</a></span>Start()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a279c2b78aa2bf43371f2462623588830">&#9670;&#160;</a></span>Start() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,6 +659,33 @@ You need to use this call. Do NOT directly call vTaskEndScheduler while using th
 <p >This is the API call that actually starts the thread running. It creates a backing FreeRTOS task. By separating object creation from starting the <a class="el" href="classcpp__freertos_1_1_thread.html">Thread</a>, it solves the pure virtual fuction call failure case. If we attempt to automatically call xTaskCreate from the base class constructor, in certain conditions the task starts to run "before" the derived class is constructed! So we don't do that anymore.</p>
 <p >This may be called from your ctor once you have completed your objects construction (so as the last step).</p>
 <p >This should only be called once ever! </p>
+
+</div>
+</div>
+<a id="ad316472f4b620715ea0afe15f157d88d" name="ad316472f4b620715ea0afe15f157d88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad316472f4b620715ea0afe15f157d88d">&#9670;&#160;</a></span>Start() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Thread::Start </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>core</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the task on the indicated core. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">core</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if it could be started successfully </dd></dl>
 
 </div>
 </div>
