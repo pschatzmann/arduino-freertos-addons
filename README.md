@@ -27,7 +27,7 @@ I have converted it to an Arduino Library, so that it can be used e.g. on an ESP
 
 ## Documentation
 
-- [Class Documentation](arduino-freertos-addons/docs/html/annotated.html)
+- [Class Documentation](https://pschatzmann.github.io/arduino-freertos-addons/docs/html/annotated.html)
 
 ### Installation in Arduino
 
